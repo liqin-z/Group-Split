@@ -5,3 +5,32 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Transaction.destroy_all
+
+Transaction.create!([{
+    user_name: 'testuser1',
+    group_name: 'testgroup',
+    trans_number: 20,
+    trans_type: "Food",
+    group_member: "unknown",
+    trans_date: "2021-10-30 01:00:00"
+},
+{
+    user_name: 'testuser2',
+    group_name: 'testgroup',
+    trans_number: 40,
+    trans_type: "Transportation",
+    group_member: "unknown",
+    trans_date: "2021-10-30 01:00:00"
+},
+{
+    user_name: 'testuser3',
+    group_name: 'testgroup',
+    trans_number: 100,
+    trans_type: "Entertainment",
+    group_member: "unknown",
+    trans_date: "2021-10-30 01:00:00"
+}])
+
+p "Created #{Transaction.count} transactions"

@@ -1,19 +1,27 @@
 <h2>Create New Transaction</h2>
 
 <%= form_tag transactions_path, :class => 'form' do %>
+  <p>
   <%= label :transaction, :user_name, 'user_name', :class => 'col-form-label' %>
+  <br>
   <%= text_field :transaction, :user_name, :class => 'form-control' %>
+  <br>
   <%= label :transaction, :trans_type, 'transaction_type', :class => 'col-form-label'  %>
+  <br>
   <%= select :transaction, :trans_type, ['', 'Food','Grocery','Transportation','Entertainment','others'], {}, {:class => 'form-control col-1'} %>
+  <br>
   <%= label :transaction, :trans_number, 'transaction_amount', :class => 'col-form-label' %>
+  <br>
   <%= text_field :transaction, :trans_number, :class => 'form-control' %>
+  <br>
   <%= label :transaction, :trans_date, 'transaction_date', :class => 'col-form-label'  %>
+  <br>
   <%= date_select :transaction, :trans_date, {}, :class => 'form-control col-2 d-inline' %>
+  <br>
   <%= label :transaction, :group_member, 'member_involved', :class => 'col-form-label' %>
+  <br>
   <%= text_field :transaction, :group_member, :class => 'form-control' %>
-  
-  
-  <br/>
+  </p>
   <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', transactions_path, :class => 'btn btn-secondary' %>
 <% end %>
