@@ -18,6 +18,18 @@ Operating databases
 rails db
 .tables
 ```
+Run Cucumber 
+```
+rake cucumber                          # Alias for cucumber:ok
+rake cucumber:all                      # Run all features
+rake cucumber:ok                       # Run features that should pass
+rake cucumber:rerun                    # Record failing features and run only them if any exist
+rake cucumber:wip                      # Run features that are being worked on
+```
+Run Rspec
+```
+bundle exec rspec spec/*
+```
 
 ### urls
 - Group Views: `http://localhost:3000/groupviews/index`
