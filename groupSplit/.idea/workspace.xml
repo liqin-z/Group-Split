@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f1144ef-f105-47d0-a5d5-bb430c4dc280" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/groupviews/groupviews.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/transactions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/transactions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/groupviews_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/groupviews_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groupviews/groupviews.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groupviews/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
@@ -228,7 +230,7 @@
       <workItem from="1635785182756" duration="258000" />
       <workItem from="1635785452490" duration="3752000" />
       <workItem from="1635789667779" duration="6267000" />
-      <workItem from="1635796805764" duration="2457000" />
+      <workItem from="1635796805764" duration="5555000" />
     </task>
     <servers />
   </component>

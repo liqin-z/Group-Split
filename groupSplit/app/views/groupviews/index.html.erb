@@ -1,0 +1,42 @@
+<h2>Group Views</h2>
+
+<h3>Summary</h3>
+user_1 owes user_2 amount money.
+
+<h3>Transaction Records</h3>
+<table>
+  <tr>
+    <th>id</th>
+    <td>&nbsp;</td>
+    <th>user_name</th>
+    <td>&nbsp;</td>
+    <th>group_name</th>
+    <td>&nbsp;</td>
+    <th>trans_amount</th>
+    <td>&nbsp;</td>
+    <th>trans_type</th>
+    <td>&nbsp;</td>
+    <th>group_member</th>
+    <td>&nbsp;</td>
+    <th>trans_date</th>
+  </tr>
+  <tr>
+    <% @transactions.each do |t| %>
+      <tr>
+        <td><%= t.id %></td>
+        <td>&nbsp;</td>
+        <td><%= t.user_name %></td>
+        <td>&nbsp;</td>
+        <td><%= t.group_name %></td>
+        <td>&nbsp;</td>
+        <td><%= t.trans_number %></td>
+        <td>&nbsp;</td>
+        <td><%= t.trans_type %></td>
+        <td>&nbsp;</td>
+        <td><%= t.group_member %></td>
+        <td>&nbsp;</td>
+        <td><%= t.trans_date %></td>
+      </tr>
+    <% end %>
+  </tr>
+</table>
