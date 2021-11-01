@@ -1,0 +1,2 @@
+module GroupViewHelper
+end

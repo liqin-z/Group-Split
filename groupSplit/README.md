@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+command line needed:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+     rails g controller transactions
+     
+     rails g model Transaction user_name:string group_name:string trans_number:decimal trans_type:string group_member:string trans_date:datetime
+     
+     rails g rspec:install
