@@ -31,6 +31,22 @@ Run Rspec
 bundle exec rspec spec/*
 ```
 
+### Run on codio
+```
+bundle install --without production
+bundle exec rake db:migrate
+bundle exec rake db:test:prepare
+bundle exec rackup --host 0.0.0.0
+```
+
+### To get cucumber and Rspec running 
+```
+rails g cucumber:install
+rails g rspec:install
+
+
+```
+
 ### urls
 - Group Views: `http://localhost:3000/groupviews/index`
 - New transactions: `http://localhost:3000/transactions/new?`
