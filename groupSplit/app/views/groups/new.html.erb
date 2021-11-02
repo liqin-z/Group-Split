@@ -1,0 +1,23 @@
+<h2>Create New Groups</h2>
+
+<%= form_tag groups_path, :class => 'form' do %>
+  <p>
+  <%= label :group, :user_name, 'user_name', :class => 'col-form-label' %>
+  <br>
+  <%= text_field :group, :user_name, :class => 'form-control' %>
+  <br>
+  <%= label :group, :group_name, 'member_involved', :class => 'col-form-label' %>
+  <br>
+  <%= text_field :group, :group_name, :class => 'form-control' %>
+  <br>
+  <%= label :group, :group_member, 'member_involved', :class => 'col-form-label' %>
+  <br>
+  <%= text_field :group, :group_member, :class => 'form-control' %>
+  <br>
+  <%= label :group, :group_date, 'transaction_date', :class => 'col-form-label'  %>
+  <br>
+  <%= date_select :group, :group_date, {}, :class => 'form-control col-2 d-inline' %>
+  </p>
+  <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', '/groupsviews/index', :class => 'btn btn-secondary' %>
+<% end %>
