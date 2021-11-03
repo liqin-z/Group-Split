@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+
   before_save { email.downcase! }
   has_many :groups
   validates :name, presence: true
