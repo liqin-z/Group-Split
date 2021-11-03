@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_01_183004) do
+ActiveRecord::Schema.define(version: 2021_11_02_235309) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
-    t.integer "created_by_user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -24,6 +23,8 @@ ActiveRecord::Schema.define(version: 2021_11_01_183004) do
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
