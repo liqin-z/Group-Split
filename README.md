@@ -39,6 +39,13 @@ bundle exec rake db:test:prepare
 bundle exec rackup --host 0.0.0.0
 ```
 
+
+### if get webpacker related error on the page, run the command
+```
+bundle exec rails webpacker:install
+```
+
+
 ### To get cucumber and Rspec running 
 ```
 rails g cucumber:install
