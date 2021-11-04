@@ -57,3 +57,4 @@ rails g rspec:install
 ### urls
 - Group Views: `http://localhost:3000/groupviews/index`
 - New transactions: `http://localhost:3000/transactions/new?`
+
