@@ -6,6 +6,8 @@
 
 ## Instruction for Run and Testing
 
+first, git clone this repository
+
 ### Development environment need:
 ```
 Ruby: 2.6.6p146
@@ -13,7 +15,11 @@ Rails: 6.0.4.1
 ```
 
 ### Install Commands
-Install dependencies
+
+#### before install
+    cd groupSplit
+
+#### Install dependencies
 ```
 bundle install
 bundle exec rake db:migrate
@@ -43,6 +49,9 @@ rails g rspec:install
 ## Heroku link
 https://stormy-savannah-87519.herokuapp.com/
 
+(If the link show "There's nothing here, yet.", just try refresh the page)
+
+## 
 ## GitHub repo
 https://github.com/graveszhang/Group-Split/tree/chenzhi_1103
 
