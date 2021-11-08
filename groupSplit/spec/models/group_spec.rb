@@ -5,9 +5,9 @@ RSpec.describe Group, :type => :model do
     t = Group.new
     t.user_name = "testuser"
     t.group_name = "testgroup"
-    t.group_type = "Food"
-    t.group_member = "unknown"
-    t.group_date = DateTime.now
+#     t.group_type = "Food"
+#     t.group_member = "unknown"
+#     t.group_date = DateTime.now
     expect(t).to be_valid
   end
 
@@ -21,13 +21,13 @@ RSpec.describe Group, :type => :model do
     expect(t).to_not be_valid
   end
 
-  it "is not valid without a group_member" do
-    t = Group.new(group_member: nil)
-    expect(t).to_not be_valid
-  end
+#   it "is not valid without a group_member" do
+#     t = Group.new(group_member: nil)
+#     expect(t).to_not be_valid
+#   end
 
-  it "is not valid without a group_date" do
-    t = Group.new(group_date: nil)
-    expect(t).to_not be_valid
-  end
+#   it "is not valid without a group_date" do
+#     t = Group.new(group_date: nil)
+#     expect(t).to_not be_valid
+#   end
 end

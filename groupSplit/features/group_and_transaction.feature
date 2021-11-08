@@ -27,7 +27,7 @@ Scenario: add transactions to existing group
     Then  I should be on the home page
     And I should see "scenario1"
     
-Scenario: cancel add transaction 
+Scenario: cancel add transaction
     When I go to the new transaction page
     And I fill in "user_name" with "scenario2"
     And I follow "Cancel"
