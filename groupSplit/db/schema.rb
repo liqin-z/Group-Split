@@ -12,6 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2021_11_01_005749) do
 
+  create_table "groups", force: :cascade do |t|
+    t.string "user_name"
+    t.string "group_name"
+    t.string "group_member"
+    t.datetime "group_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "transactions", force: :cascade do |t|
     t.string "user_name"
     t.string "group_name"
