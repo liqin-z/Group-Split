@@ -6,6 +6,26 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Group.destroy_all
+
+Group.create!([{
+    user_name: 'testuser1',
+    group_name: 'testgroup',
+},
+{
+    user_name: 'testuser2',
+    group_name: 'testgroup',
+},
+{
+    user_name: 'testuser3',
+    group_name: 'testgroup',
+}])
+
+p "Created the group #{Group.group_name}"
+
+
+
+
 Transaction.destroy_all
 # reset id -> work around: use rake db:drop && rake db:create && rake db:migrate
 # ActiveRecord::Base.connection.reset_pk_sequence!(Transaction)
