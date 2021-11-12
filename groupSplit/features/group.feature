@@ -25,6 +25,6 @@ Scenario: add people to a group
     # And I fill in "member_involved" with "all"
     
     And I press "Save Changes"
-    Then  I should be on the home page
+    Then I should be on the home page
     And I should see "scenario1"
     

@@ -9,6 +9,7 @@ class TransactionsController < ApplicationController
   def create
     @transaction = Transaction.create!(transaction_params)
     flash[:notice] = "transaction of #{@transaction.trans_number} was successfully created."
+      puts "***********************RIGHT HERE AGAIN******************"
     redirect_to '/groupviews/index'
   end
     
