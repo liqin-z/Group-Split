@@ -2,8 +2,8 @@ Feature: new transactions to existing group
 
   As a user
   So that I can create a new transaction
-  I want to specify my name; group I want to add;
-     transations to, the transaction type, amount and date;
+  I want to specify my name; group I want to add to;
+     transations type, amount and date;
      and group member to do the split with
 
 Background: transactions in current group

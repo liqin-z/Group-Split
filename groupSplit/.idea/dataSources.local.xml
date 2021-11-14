@@ -6,5 +6,10 @@
       <auth-provider>no-auth</auth-provider>
       <schema-mapping />
     </data-source>
+    <data-source name="test" uuid="7ee0fd3c-32c8-440b-ad0e-5659e990b737">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :transactions
   # root :to => redirect('/transactions/new')
   get 'groupviews/index'
+  get '/', to: redirect('/groupviews/index')
   root :to => redirect('/groupviews/index')
 end

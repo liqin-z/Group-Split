@@ -1,44 +1,49 @@
-<h2>Group Views</h2>
+<%= stylesheet_link_tag 'style.css' %>
 
-<h3>Summary</h3>
-user_1 owes user_2 amount money.
+<h2 id="groupviews">Group Views</h2>
+
+<h3>Balance Summary</h3>
+<table>
+  <tr>
+    <th>user_name</th>
+    <th>group_name</th>
+    <th>balance</th>
+  </tr>
+  <tr>
+    <% @payments.each do |p| %>
+    <tr>
+      <td><%= p.user_name %></td>
+      <td><%= p.group_name %></td>
+      <td>$ <%= p.balance %></td>
+    </tr>
+  <% end %>
+  </tr>
+</table>
 
 <h3>Transaction Records</h3>
 <table>
   <tr>
     <th>id</th>
-    <td>&nbsp;</td>
     <th>user_name</th>
-    <td>&nbsp;</td>
     <th>group_name</th>
-    <td>&nbsp;</td>
     <th>trans_amount</th>
-    <td>&nbsp;</td>
     <th>trans_type</th>
-    <td>&nbsp;</td>
     <th>group_member</th>
-    <td>&nbsp;</td>
     <th>trans_date</th>
   </tr>
   <tr>
     <% @transactions.each do |t| %>
       <tr>
         <td><%= t.id %></td>
-        <td>&nbsp;</td>
         <td><%= t.user_name %></td>
-        <td>&nbsp;</td>
         <td><%= t.group_name %></td>
-        <td>&nbsp;</td>
         <td><%= t.trans_number %></td>
-        <td>&nbsp;</td>
         <td><%= t.trans_type %></td>
-        <td>&nbsp;</td>
         <td><%= t.group_member %></td>
-        <td>&nbsp;</td>
         <td><%= t.trans_date %></td>
       </tr>
     <% end %>
   </tr>
 </table>
 
-<%= button_to "Create New Transaction", "/transactions/new", method: "get" %>
+<%= button_to "Create New Transaction", "/transactions/new", method: "get", class:"btn-hover color" %>
