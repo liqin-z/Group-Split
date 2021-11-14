@@ -2,6 +2,7 @@ class GroupviewsController < ApplicationController
   def index
     @transactions = Transaction.all
 
+
     # individuals = Transaction.find_by(group_name: "testgroup")
     # puts 'refreshing call this'
     # puts 'refreshing call this'
@@ -30,5 +31,6 @@ class GroupviewsController < ApplicationController
         end
       end
     end
-  end
+
+   
 end
