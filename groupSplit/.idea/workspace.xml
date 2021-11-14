@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd8535cc-ec5c-458e-a184-6a4ed436415b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/groups.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/groupsviews.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/groups_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/groupsviews_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/groups_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/groupsviews_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/group.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/groups/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/groupsviews/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/controllers/groups_controller_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/helpers/groups_helper_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/models/group_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/groupviews_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/groupviews_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/group_view_helper.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/groupviews/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groupviews/index.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1636832147216</updated>
-      <workItem from="1636832150265" duration="15775000" />
+      <workItem from="1636832150265" duration="18949000" />
     </task>
     <servers />
   </component>
