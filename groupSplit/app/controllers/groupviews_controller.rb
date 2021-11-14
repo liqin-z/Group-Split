@@ -1,13 +1,7 @@
 class GroupviewsController < ApplicationController
   def index
     @transactions = Transaction.all
-
-    # individuals = Transaction.find_by(group_name: "testgroup")
-    # puts 'refreshing call this'
-    # puts 'refreshing call this'
-    # puts 'refreshing call this'
-    # puts individuals.inspect
-
+    @payments = PaymentSummary.all
 
     @transactions.each do |t|
       current_user_name = t.user_name

@@ -1,7 +1,28 @@
 <h2>Group Views</h2>
 
-<h3>Summary</h3>
-user_1 owes user_2 amount money.
+<h3>Balance Summary</h3>
+<table>
+  <tr>
+    <th>user_name</th>
+    <td>&nbsp;</td>
+    <th>group_name</th>
+    <td>&nbsp;</td>
+    <th>balance</th>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <% @payments.each do |p| %>
+    <tr>
+      <td><%= p.user_name %></td>
+      <td>&nbsp;</td>
+      <td><%= p.group_name %></td>
+      <td>&nbsp;</td>
+      <td>$ <%= p.balance %></td>
+      <td>&nbsp;</td>
+    </tr>
+  <% end %>
+  </tr>
+</table>
 
 <h3>Transaction Records</h3>
 <table>
