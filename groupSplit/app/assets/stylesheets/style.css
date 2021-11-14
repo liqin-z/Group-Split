@@ -7,6 +7,15 @@
     background-color: #6B718B;
     margin: 10px auto;
 }
+#transactions {
+    color:#ffffff;
+    padding:20px;
+    border-radius: 10px;
+    opacity:1.0;
+    font:40px Arial, Helvetica, sans-serif;
+    background-color: #6B718B;
+    margin: 10px auto;
+}
 
 h3 {
     color:#ffffff;
