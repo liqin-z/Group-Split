@@ -1,0 +1,15 @@
+<%= stylesheet_link_tag 'style.css' %>
+
+<h2 id="members">Add New Member</h2>
+
+<%= form_tag members_path, :method => "post", :class => 'form' do %>
+  <p>
+  <%= hidden_field :group_id, :value=>"TODO"%>
+
+  <%= label :group_member, :member_name, 'new member name', :class => 'col-form-label' %>
+  <br>
+  <%= text_field :group_member, :member_name, :class => 'form-control' %>
+  </p>
+  <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', '/groupviews/index', :class => 'btn btn-secondary' %>
+<% end %>

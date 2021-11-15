@@ -4,6 +4,8 @@ class TransactionsController < ApplicationController
   end
     
   def new
+    @member_names = GroupMember.pluck(:member_name)
+    @member_names.append('ALL')
   end
     
   def create
@@ -11,7 +13,8 @@ class TransactionsController < ApplicationController
     flash[:notice] = "transaction of #{@transaction.trans_number} was successfully created."
     redirect_to '/groupviews/index'
   end
-    
+  
+  
   private
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.

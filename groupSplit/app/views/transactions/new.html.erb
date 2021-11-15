@@ -26,7 +26,9 @@
   <br>
   <%= label :transaction, :group_member, 'member_involved', :class => 'col-form-label' %>
   <br>
-  <%= text_field :transaction, :group_member, :class => 'form-control' %>
+  <%= select :transaction, :group_member, @member_names, { :multiple => true}, {:class => 'form-control col-1'} %>
+  <br>
+
   </p>
   <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', '/groupviews/index', :class => 'btn btn-secondary' %>

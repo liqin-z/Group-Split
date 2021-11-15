@@ -20,6 +20,22 @@
   </tr>
 </table>
 
+<h3>member Summary</h3>
+<table>
+  <tr>
+    <th>group id</th>
+    <th>member name</th>
+  </tr>
+  <tr>
+    <% @members.each do |m| %>
+    <tr>
+      <td><%= m.group_id %></td>
+      <td><%= m.member_name %></td>
+    </tr>
+  <% end %>
+  </tr>
+</table>
+
 <h3>Transaction Records</h3>
 <table>
   <tr>
@@ -42,8 +58,11 @@
         <td><%= t.group_member %></td>
         <td><%= t.trans_date %></td>
       </tr>
+    
     <% end %>
   </tr>
 </table>
 
 <%= button_to "Create New Transaction", "/transactions/new", method: "get", class:"btn-hover color" %>
+
+<%= button_to "Add New Member", "/members/new", method: "get", class:"btn-hover left" %>

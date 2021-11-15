@@ -17,6 +17,16 @@
     margin: 10px auto;
 }
 
+#members {
+    color:#ffffff;
+    padding:20px;
+    border-radius: 10px;
+    opacity:1.0;
+    font:40px Arial, Helvetica, sans-serif;
+    background-color: #6B718B;
+    margin: 10px auto;
+}
+
 h3 {
     color:#ffffff;
     padding:10px;
@@ -58,7 +68,6 @@ tbody tr:hover {
 
 .btn-hover {
     position: absolute;
-    right: 150px;
     width: 400px;
     font-size: 16px;
     font-weight: 300;
@@ -88,6 +97,12 @@ tbody tr:hover {
     outline: none;
 }
 .btn-hover.color {
+    right: 150px;
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+.btn-hover.left {
+    left: 150px;
     background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
