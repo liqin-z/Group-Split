@@ -31,5 +31,5 @@
 
   </p>
   <%= submit_tag 'Update Transaction Detail', :class => 'btn btn-primary' %>
-  <%= link_to 'Cancel', '/groupviews/index', :class => 'btn btn-secondary' %>
+  <%= link_to 'Cancel', transaction_path(@transaction), :class => 'btn btn-secondary' %>
 <% end %>

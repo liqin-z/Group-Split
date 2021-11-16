@@ -36,8 +36,8 @@ class TransactionsController < ApplicationController
   def update
     @transaction = Transaction.find(params[:id])
     @transaction.update_attributes!(transaction_params)
-    flash[:notice] = "#{@transaction.id} was successfully updated."
-    redirect_to '/groupviews/index'
+    flash[:notice] = "Transaction #{@transaction.id} was successfully updated."
+    redirect_to transaction_path(@transaction)
   end
     
   private
