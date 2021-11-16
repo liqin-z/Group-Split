@@ -4,8 +4,6 @@
 
 <%= form_tag members_path, :method => "post", :class => 'form' do %>
   <p>
-  <%= hidden_field :group_id, :value=>"TODO"%>
-
   <%= label :group_member, :member_name, 'new member name', :class => 'col-form-label' %>
   <br>
   <%= text_field :group_member, :member_name, :class => 'form-control' %>

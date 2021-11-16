@@ -46,6 +46,7 @@
     <th>trans_type</th>
     <th>group_member</th>
     <th>trans_date</th>
+    <th>More Info</th>
   </tr>
   <tr>
     <% @transactions.each do |t| %>
@@ -57,6 +58,9 @@
         <td><%= t.trans_type %></td>
         <td><%= t.group_member %></td>
         <td><%= t.trans_date %></td>
+        <td>
+          <%= link_to "Detail", transaction_path(t) %>
+        </td>
       </tr>
     
     <% end %>
