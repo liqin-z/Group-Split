@@ -11,6 +11,7 @@ class TransactionsController < ApplicationController
     
   def new
     @member_names = GroupMember.pluck(:member_name)
+    @user_names = GroupMember.pluck(:member_name)
     @member_names.append('ALL')
   end
     
@@ -30,7 +31,10 @@ class TransactionsController < ApplicationController
     
   def edit
     @transaction = Transaction.find(params[:id])
+    @user_names = GroupMember.pluck(:member_name)
     @member_names = GroupMember.pluck(:member_name)
+    @member_names.append('ALL')
+
   end
   
   def update

@@ -24,3 +24,11 @@ Scenario: Add new user to this group
     And I press "Save Changes"
     Then  I should be on the home page
     And I should see "member3"
+    
+Scenario: Try add new user with exising name to this group
+    Given I am on the home page
+    And I press "Add New Member"
+    And I fill in "new member name" with "member1"
+    And I press "Save Changes"
+    Then  I should be on the home page
+    And I should see "Failed"
