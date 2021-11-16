@@ -50,8 +50,6 @@ bundle exec rails webpacker:install
 ```
 rails g cucumber:install
 rails g rspec:install
-
-
 ```
 
 ### urls
