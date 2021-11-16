@@ -1,15 +1,47 @@
 class TransactionsController < ApplicationController
-  
+    
+  def show
+    id = params[:id] # retrieve movie ID from URI route
+    @transaction = Transaction.find(id) # look up movie by unique ID
+    # will render app/views/transaction/show.<extension> by default
+  end
+    
   def index
   end
     
   def new
+    @member_names = GroupMember.pluck(:member_name)
+    @user_names = GroupMember.pluck(:member_name)
+    @member_names.append('ALL')
   end
     
   def create
     @transaction = Transaction.create!(transaction_params)
     flash[:notice] = "transaction of #{@transaction.trans_number} was successfully created."
     redirect_to '/groupviews/index'
+  end
+  
+  def destroy
+    @transaction = Transaction.find(params[:id])
+    @transaction.destroy
+    flash[:notice] = "Transaction '#{@transaction.id}' deleted."
+    redirect_to '/groupviews/index'
+  end
+  
+    
+  def edit
+    @transaction = Transaction.find(params[:id])
+    @user_names = GroupMember.pluck(:member_name)
+    @member_names = GroupMember.pluck(:member_name)
+    @member_names.append('ALL')
+
+  end
+  
+  def update
+    @transaction = Transaction.find(params[:id])
+    @transaction.update_attributes!(transaction_params)
+    flash[:notice] = "Transaction #{@transaction.id} was successfully updated."
+    redirect_to transaction_path(@transaction)
   end
     
   private

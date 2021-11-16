@@ -1,0 +1,33 @@
+<!--  app/views/transaction/show.html.erb -->
+<h3>Details about Transaction <em><%= @transaction.id %></em></h3>
+
+<ul id="details">
+  <li>
+    Transaction Time:
+    <%= @transaction.trans_date.strftime("%B %d, %Y") %>
+  </li>
+  <li>
+    Amount:
+    <%= @transaction.trans_number%>
+  </li>
+  <li>
+    Member Involved:
+    <%= @transaction.group_member %>
+  </li>
+  <li>
+    Transaction Type:
+    <%= @transaction.trans_type %>
+  </li>
+  <li>
+    Payed By:
+    <%= @transaction.user_name %>
+  </li>
+</ul>
+
+
+<div class="row">
+  <%= link_to 'Edit Transaction', edit_transaction_path(@transaction)%>
+  <%= link_to 'Delete', transaction_path(@transaction), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?'%>
+  <%= link_to 'Back to record page', '/groupviews/index' %>
+
+</div>

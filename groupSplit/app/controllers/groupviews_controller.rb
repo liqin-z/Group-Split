@@ -2,7 +2,9 @@ class GroupviewsController < ApplicationController
   def index
     @transactions = Transaction.all
     @payments = PaymentSummary.all
+    @members = GroupMember.all
 
+    
     @transactions.each do |t|
       current_user_name = t.user_name
       current_group_name = t.group_name

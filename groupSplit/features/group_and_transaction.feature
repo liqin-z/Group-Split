@@ -1,4 +1,4 @@
-Feature: new transactions to existing group
+Feature: manage transactions
 
   As a user
   So that I can create a new transaction
@@ -6,7 +6,7 @@ Feature: new transactions to existing group
      transations type, amount and date;
      and group member to do the split with
 
-Background: transactions in current group
+Background: transactions and members in current group
 
   Given the following transactions exist:
   | user_name | group_name | trans_type   | trans_number |   trans_date  | group_member |
@@ -14,23 +14,38 @@ Background: transactions in current group
   |  jane oe |    curr     |       Grocery      |         76.5       | 2021-10-30 01:10:00 |       all       |
   |  jane e |    curr      |   Transportation   |        2.75        | 2021-11-30 01:00:00 |       all       |
   |  jane  |     curr      |   Entertainment    |          67        | 2021-12-30 01:00:00 |       all       |
+  And the following members exist:
+  | group_id | member_name |
+  |  pending |   member1   |
+  |  pending |   member2   |
+
 
 Scenario: add transactions to existing group
     When I go to the new transaction page
-    And I fill in "user_name" with "scenario1"
-    And I fill in "group_name" with "group1"
+    And I select "member1" as the "user_name"  
+    And I fill in "group_name" with "pending"
     And I fill in "transaction_amount" with "90"
     And I select "others" as the "transaction_trans_type"
     And I select datetime "2024 December 2" as the "transaction_trans_date"
-    And I fill in "member_involved" with "all"
+    And I select "ALL" as the "member_involved"
     And I press "Save Changes"
     Then  I should be on the home page
-    And I should see "scenario1"
+    And I should see "member1"
     
 Scenario: cancel add transaction 
     When I go to the new transaction page
-    And I fill in "user_name" with "scenario2"
+    And I select "member2" as the "user_name"
     And I follow "Cancel"
     Then  I should be on the home page
     And I should not see "scenario2"
     
+    
+Scenario: update existing transaction
+    Given I am on the home page
+    And I follow "Detail about Transaction 1"
+    And I follow "Edit Transaction"
+    And I fill in "transaction_amount" with "11111"
+    And I press "Update Transaction Detail"
+    Then I should see "11111"
+
+

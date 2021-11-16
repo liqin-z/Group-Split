@@ -20,6 +20,7 @@
   </tr>
 </table>
 
+
 <h3>Transaction Records</h3>
 <table>
   <tr>
@@ -30,6 +31,7 @@
     <th>trans_type</th>
     <th>group_member</th>
     <th>trans_date</th>
+    <th>More Info</th>
   </tr>
   <tr>
     <% @transactions.each do |t| %>
@@ -41,9 +43,15 @@
         <td><%= t.trans_type %></td>
         <td><%= t.group_member %></td>
         <td><%= t.trans_date %></td>
+        <td>
+          <%= link_to "Detail about Transaction #{t.id}", transaction_path(t) %>
+        </td>
       </tr>
+    
     <% end %>
   </tr>
 </table>
 
 <%= button_to "Create New Transaction", "/transactions/new", method: "get", class:"btn-hover color" %>
+
+<%= button_to "Add New Member", "/members/new", method: "get", class:"btn-hover left" %>

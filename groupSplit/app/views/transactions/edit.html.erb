@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag 'style.css' %>
 
-<h2 id="transactions">Create New Transaction</h2>
+<h2 id="transactions">Edit Existing Transaction</h2>
 
-<%= form_tag transactions_path, :class => 'form' do %>
+<%= form_tag transaction_path(@transaction), :method => :put do %>
   <p>
   <%= label :transaction, :user_name, 'user_name', :class => 'col-form-label' %>
   <br>
@@ -30,6 +30,6 @@
   <br>
 
   </p>
-  <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
-  <%= link_to 'Cancel', '/groupviews/index', :class => 'btn btn-secondary' %>
+  <%= submit_tag 'Update Transaction Detail', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', transaction_path(@transaction), :class => 'btn btn-secondary' %>
 <% end %>
