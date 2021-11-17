@@ -12,6 +12,10 @@ class GroupviewsController < ApplicationController
       next if current_user_name.blank? || current_group_name.blank? || current_trans_number.blank?
 
       ## Update group members
+      # NO NEED TO REMOVE GROUP MEMBER EVEN IF TRANSACTION DELETED
+      # TODO: Manualy CRUD members
+      #
+
       if !GroupMember.exists?(member_name: current_user_name)
         gm_entry = GroupMember.new
         gm_entry.member_name = current_user_name
