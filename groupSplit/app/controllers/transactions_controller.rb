@@ -47,7 +47,7 @@ class TransactionsController < ApplicationController
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.
   def transaction_params
-    params.require(:transaction).permit(:user_name, :group_name, :trans_number, :trans_type, :group_member, :trans_date)
+    params.require(:transaction).permit(:user_name, :group_name, :trans_number, :trans_type, :trans_date, group_member: [])
   end
     
 end

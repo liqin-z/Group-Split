@@ -1,38 +1,43 @@
 #groupviews {
-    color:#ffffff;
-    padding:20px;
+    color: #ffffff;
+    padding: 20px;
     border-radius: 10px;
-    opacity:1.0;
-    font:40px Arial, Helvetica, sans-serif;
+    opacity: 1.0;
+    font: 40px Arial, Helvetica, sans-serif;
     background-color: #6B718B;
     margin: 10px auto;
 }
+
 #transactions {
-    color:#ffffff;
-    padding:20px;
+    color: #ffffff;
+    padding: 20px;
     border-radius: 10px;
-    opacity:1.0;
-    font:40px Arial, Helvetica, sans-serif;
+    opacity: 1.0;
+    font: 40px Arial, Helvetica, sans-serif;
     background-color: #6B718B;
     margin: 10px auto;
 }
 
 #members {
-    color:#ffffff;
-    padding:20px;
+    color: #ffffff;
+    padding: 20px;
     border-radius: 10px;
-    opacity:1.0;
-    font:40px Arial, Helvetica, sans-serif;
+    opacity: 1.0;
+    font: 40px Arial, Helvetica, sans-serif;
     background-color: #6B718B;
     margin: 10px auto;
 }
 
+#member_field {
+    width:100%;
+}
+
 h3 {
-    color:#ffffff;
-    padding:10px;
+    color: #ffffff;
+    padding: 10px;
     border-radius: 10px;
-    opacity:0.7;
-    font:20px Arial, Helvetica, sans-serif;
+    opacity: 0.7;
+    font: 20px Arial, Helvetica, sans-serif;
     background-color: #6B718B;
     margin: 10px auto;
 }
@@ -43,10 +48,10 @@ table {
     margin: 25px auto;
     border: 1px solid #eee;
     border-bottom: 2px solid lightslategrey;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
-    0px 10px 20px rgba(0,0,0,0.05),
-    0px 20px 20px rgba(0,0,0,0.05),
-    0px 30px 20px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10),
+    0px 10px 20px rgba(0, 0, 0, 0.05),
+    0px 20px 20px rgba(0, 0, 0, 0.05),
+    0px 30px 20px rgba(0, 0, 0, 0.05);
 }
 
 th, td {
@@ -55,6 +60,7 @@ th, td {
     padding: 12px 35px;
     border-collapse: collapse;
 }
+
 th {
     background: lightslategrey;
     color: #fff;
@@ -75,7 +81,7 @@ tbody tr:hover {
     cursor: pointer;
     margin: 10px;
     height: 50px;
-    text-align:center;
+    text-align: center;
     border: none;
     background-size: 200% 100%;
     border-radius: 50px;
@@ -96,11 +102,13 @@ tbody tr:hover {
 .btn-hover:focus {
     outline: none;
 }
+
 .btn-hover.color {
     right: 150px;
     background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
+
 .btn-hover.left {
     left: 150px;
     background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
