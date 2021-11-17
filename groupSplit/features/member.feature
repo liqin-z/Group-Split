@@ -19,16 +19,16 @@ Background: transactions and members in current group
 
 Scenario: Add new user to this group
     Given I am on the home page
-    And I press "Add New Member"
-    And I fill in "new member name" with "member3"
+    And I press "Manage Group Members"
+    And I fill in "Enter the member name:" with "member3"
     And I press "Save Changes"
     Then  I should be on the home page
     And I should see "member3"
     
 Scenario: Try add new user with exising name to this group
     Given I am on the home page
-    And I press "Add New Member"
-    And I fill in "new member name" with "member1"
+    And I press "Manage Group Members"
+    And I fill in "Enter the member name:" with "member1"
     And I press "Save Changes"
     Then  I should be on the home page
     And I should see "Failed"
