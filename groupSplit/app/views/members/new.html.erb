@@ -1,12 +1,28 @@
 <%= stylesheet_link_tag 'style.css' %>
 
-<h2 id="members">Add New Member</h2>
+<h3 id="members">Members in this group</h3>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Joined since</th>
+  </tr>
+  <tr>
+    <% @members.each do |m| %>
+    <tr>
+      <td><%= m.member_name %></td>
+      <td><%= m.created_at %></td>
+    </tr>
+  <% end %>
+  </tr>
+</table>
+
+<h3 id="members">Add New Member</h3>
 
 <%= form_tag members_path, :method => "post", :class => 'form' do %>
   <p>
-  <%= label :group_member, :member_name, 'new member name', :class => 'col-form-label' %>
-  <br>
-  <%= text_field :group_member, :member_name, :class => 'form-control' %>
+    <%= label :group_member, :member_name, 'new member name', :class => 'col-form-label' %>
+    <br>
+    <%= text_field :group_member, :member_name, :class => 'form-control' %>
   </p>
   <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', '/groupviews/index', :class => 'btn btn-secondary' %>
