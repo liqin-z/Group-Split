@@ -4,12 +4,14 @@
 <table>
   <tr>
     <th>Name</th>
+<!--    <th>Group ID</th>-->
     <th>Joined since</th>
   </tr>
   <tr>
     <% @members.each do |m| %>
     <tr>
       <td><%= m.member_name %></td>
+<!--      <td><%#= m.group_id %></td>-->
       <td><%= m.created_at %></td>
     </tr>
   <% end %>
@@ -20,8 +22,7 @@
 
 <%= form_tag members_path, :method => "post", :class => 'form' do %>
   <p>
-    <%= label :group_member, :member_name, 'new member name', :class => 'col-form-label' %>
-    <br>
+    <%= label :group_member, :member_name, 'Enter the member name:', :class => 'col-form-label' %>
     <%= text_field :group_member, :member_name, :class => 'form-control' %>
   </p>
   <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
