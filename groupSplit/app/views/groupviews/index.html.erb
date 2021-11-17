@@ -29,7 +29,7 @@
     <th>group_name</th>
     <th>trans_amount</th>
     <th>trans_type</th>
-    <th>group_member</th>
+    <th>invoved_group_members</th>
     <th>trans_date</th>
     <th>More Info</th>
   </tr>
@@ -54,4 +54,4 @@
 
 <%= button_to "Create New Transaction", "/transactions/new", method: "get", class:"btn-hover color" %>
 
-<%= button_to "Add New Member", "/members/new", method: "get", class:"btn-hover left" %>
+<%= button_to "Manage Group Members", "/members/new", method: "get", class:"btn-hover left" %>
