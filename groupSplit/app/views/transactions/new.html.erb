@@ -8,10 +8,6 @@
     <br>
     <%= select :transaction, :user_name, @user_names, :class => 'form-control' %>
     <br>
-    <%= label :transaction, :group_name, 'Group name:', :class => 'col-form-label' %>
-    <br>
-    <%= select :transaction, :group_name, @group_names, { :multiple => false }, { :class => 'form-control col-1' } %>
-    <br>
     <%= label :transaction, :trans_type, 'Transaction type:', :class => 'col-form-label' %>
     <br>
     <%= select :transaction, :trans_type, ['', 'Food', 'Grocery', 'Transportation', 'Entertainment', 'others'], {}, { :class => 'form-control col-1' } %>

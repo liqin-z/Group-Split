@@ -27,7 +27,6 @@ Background: transactions and members in current group
 Scenario: add transactions to existing group
     When I go to the new transaction page
     And I select "member1" as the "User name:"  
-    And I select "pending" as the "Group name:" 
     And I fill in "Transaction amount:" with "90"
     And I select "others" as the "transaction_trans_type"
     And I select datetime "2024 December 2" as the "transaction_trans_date"
