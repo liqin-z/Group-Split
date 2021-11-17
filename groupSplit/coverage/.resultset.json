@@ -200,7 +200,7 @@
         "lines": [
           1,
           1,
-          1,
+          null,
           1,
           1,
           null,
@@ -209,7 +209,7 @@
         ]
       }
     },
-    "timestamp": 1637189745
+    "timestamp": 1637192031
   },
   "Cucumber Features": {
     "coverage": {
@@ -421,6 +421,6 @@
         ]
       }
     },
-    "timestamp": 1637191292
+    "timestamp": 1637192006
   }
 }

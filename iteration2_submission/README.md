@@ -42,6 +42,12 @@ rails g cucumber:install
 rails g rspec:install
 ```
 
+#### To run cucumber and Rspec test
+```
+rake cucumber
+rake spec
+```
+
 #### see our coverage result: 
      in groupSplit/coverage/index.html
      
