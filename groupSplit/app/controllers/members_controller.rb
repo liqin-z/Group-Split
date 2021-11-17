@@ -1,7 +1,9 @@
 class MembersController < ApplicationController
   def index
   end
+
   def new
+    @members = GroupMember.all
   end
     
   def create

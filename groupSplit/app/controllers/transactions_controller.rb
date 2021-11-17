@@ -10,9 +10,9 @@ class TransactionsController < ApplicationController
   end
     
   def new
-    @member_names = GroupMember.pluck(:member_name)
+    @member_names = GroupMember.pluck(:member_name).append('ALL')
     @user_names = GroupMember.pluck(:member_name)
-    @member_names.append('ALL')
+    @group_names = Transaction.distinct.pluck(:group_name)
   end
     
   def create
@@ -32,9 +32,8 @@ class TransactionsController < ApplicationController
   def edit
     @transaction = Transaction.find(params[:id])
     @user_names = GroupMember.pluck(:member_name)
-    @member_names = GroupMember.pluck(:member_name)
-    @member_names.append('ALL')
-
+    @member_names = GroupMember.pluck(:member_name).append('ALL')
+    @group_names = Transaction.distinct.pluck(:group_name)
   end
   
   def update
@@ -48,7 +47,7 @@ class TransactionsController < ApplicationController
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.
   def transaction_params
-    params.require(:transaction).permit(:user_name, :group_name, :trans_number, :trans_type, :group_member, :trans_date)
+    params.require(:transaction).permit(:user_name, :group_name, :trans_number, :trans_type, :trans_date, group_member: [])
   end
     
 end

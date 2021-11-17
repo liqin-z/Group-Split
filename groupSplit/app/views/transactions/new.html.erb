@@ -4,29 +4,34 @@
 
 <%= form_tag transactions_path, :class => 'form' do %>
   <p>
-  <%= label :transaction, :user_name, 'user_name', :class => 'col-form-label' %>
-  <br>
-  <%= select :transaction, :user_name, @user_names, :class => 'form-control' %>
-  <br>
-  <%= label :transaction, :group_name, 'group_name', :class => 'col-form-label' %>
-  <br>
-  <%= text_field :transaction, :group_name, :class => 'form-control' %>
-  <br>
-  <%= label :transaction, :trans_type, 'transaction_type', :class => 'col-form-label'  %>
-  <br>
-  <%= select :transaction, :trans_type, ['', 'Food','Grocery','Transportation','Entertainment','others'], {}, {:class => 'form-control col-1'} %>
-  <br>
-  <%= label :transaction, :trans_number, 'transaction_amount', :class => 'col-form-label' %>
-  <br>
-  <%= text_field :transaction, :trans_number, :class => 'form-control' %>
-  <br>
-  <%= label :transaction, :trans_date, 'transaction_date', :class => 'col-form-label'  %>
-  <br>
-  <%= date_select :transaction, :trans_date, {}, :class => 'form-control col-2 d-inline' %>
-  <br>
-  <%= label :transaction, :group_member, 'member_involved', :class => 'col-form-label' %>
-  <br>
-  <%= select :transaction, :group_member, @member_names, { :multiple => true}, {:class => 'form-control col-1'} %>
+    <%= label :transaction, :user_name, 'User name:', :class => 'col-form-label' %>
+    <br>
+    <%= text_field :transaction, :user_name, :class => 'form-control' %>
+    <br>
+    <%= label :transaction, :group_name, 'Group name:', :class => 'col-form-label' %>
+    <br>
+    <%= select :transaction, :group_name, @group_names, { :multiple => false }, { :class => 'form-control col-1' } %>
+    <br>
+    <%= label :transaction, :trans_type, 'Transaction type:', :class => 'col-form-label' %>
+    <br>
+    <%= select :transaction, :trans_type, ['', 'Food', 'Grocery', 'Transportation', 'Entertainment', 'others'], {}, { :class => 'form-control col-1' } %>
+    <br>
+    <%= label :transaction, :trans_number, 'Transaction amount:', :class => 'col-form-label' %>
+    <br>
+    <%= text_field :transaction, :trans_number, :class => 'form-control' %>
+    <br>
+    <%= label :transaction, :trans_date, 'Transaction date:', :class => 'col-form-label' %>
+    <br>
+    <%= date_select :transaction, :trans_date, {}, :class => 'form-control col-2 d-inline' %>
+    <br>
+    <%#= label :transaction, :group_member, 'member_involved', :class => 'col-form-label' %>
+    <%#= select :transaction, :group_member, @member_names, { :multiple => true}, {:class => 'form-control col-1'} %>
+    <%= fields_for(@members) do |m| %>
+    <div id="member_field">
+      <%= m.label "Members involved:" %> <br />
+      <%= collection_select(:transaction, :group_member, GroupMember.all, :member_name, :member_name, {include_hidden: false}, { :multiple => true, :size => 10}) %>
+    </div>
+  <% end %>
   <br>
 
   </p>
