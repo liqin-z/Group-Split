@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="RM-212.5284.50">
+  <component name="dataSourceStorageLocal" created-in="RM-212.5457.52">
     <data-source name="development" uuid="87a5a430-7c2d-40f8-9316-2faa7e0fcfdc">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
       <auth-provider>no-auth</auth-provider>
@@ -8,7 +8,6 @@
     </data-source>
     <data-source name="test" uuid="7ee0fd3c-32c8-440b-ad0e-5659e990b737">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
-      <auth-provider>no-auth</auth-provider>
       <schema-mapping />
     </data-source>
   </component>
