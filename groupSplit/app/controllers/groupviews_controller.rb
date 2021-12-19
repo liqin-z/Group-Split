@@ -14,7 +14,7 @@ class GroupviewsController < ApplicationController
       # puts involved_members
       involved_member_number = involved_members.length
       # puts involved_member_number
-      next if current_user_name.blank? || current_group_name.blank? || current_trans_number.blank?
+      next if current_user_name.blank? || current_trans_number.blank?
 
       unless GroupMember.exists?(member_name: current_user_name)
         gm_entry = GroupMember.new
