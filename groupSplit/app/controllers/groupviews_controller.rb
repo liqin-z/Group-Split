@@ -10,10 +10,12 @@ class GroupviewsController < ApplicationController
       current_user_name = t.user_name.strip
       current_group_name = t.group_name
       current_trans_number = t.trans_number
+
       involved_members = t.group_member.delete('[]"').split(', ',999)
       # puts involved_members
       involved_member_number = involved_members.length
       # puts involved_member_number
+
       next if current_user_name.blank? || current_trans_number.blank?
 
       unless GroupMember.exists?(member_name: current_user_name)
