@@ -16,8 +16,20 @@ class TransactionsController < ApplicationController
   end
     
   def create
-    @transaction = Transaction.create!(transaction_params)
-    flash[:notice] = "transaction of #{@transaction.trans_number} was successfully created."
+    
+    if transaction_params[:trans_number].blank?
+        flash[:notice] = "failed to add transaction due to missing charged number"
+    elsif transaction_params[:trans_type].blank?
+        flash[:notice] = "failed to add a transaction without transaction type"
+    else
+        
+        @transaction = Transaction.create!(transaction_params)
+        if transaction_params[:group_member].nil?
+            @transaction.update({group_member: GroupMember.pluck(:member_name)})
+        end
+        flash[:notice] = "transaction of #{@transaction.trans_number} was successfully created."
+    end
+    
     redirect_to '/groupviews/index'
   end
   
@@ -37,9 +49,16 @@ class TransactionsController < ApplicationController
   end
   
   def update
+    
     @transaction = Transaction.find(params[:id])
-    @transaction.update_attributes!(transaction_params)
-    flash[:notice] = "Transaction #{@transaction.id} was successfully updated."
+    if transaction_params[:trans_number].blank?
+        flash[:notice] = "failed to update transaction due to missing charged number"
+    elsif transaction_params[:trans_type].blank?
+        flash[:notice] = "failed to update a transaction without transaction type"
+    else
+        @transaction.update_attributes!(transaction_params)
+        flash[:notice] = "Transaction #{@transaction.id} was successfully updated."
+    end
     redirect_to transaction_path(@transaction)
   end
     

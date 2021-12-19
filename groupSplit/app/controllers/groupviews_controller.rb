@@ -11,9 +11,14 @@ class GroupviewsController < ApplicationController
       current_group_name = t.group_name
       current_trans_number = t.trans_number
 
-      involved_members = t.group_member.delete('[]"').split(', ',999)
+      if t.group_member.nil?
+          involved_members = []
+      else
+          involved_members = t.group_member.delete('[]"').split(', ',999)
+      end
       # puts involved_members
       involved_member_number = involved_members.length
+
       # puts involved_member_number
 
       next if current_user_name.blank? || current_trans_number.blank?

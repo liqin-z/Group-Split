@@ -30,7 +30,6 @@ Scenario: add transactions to existing group
     And I fill in "Transaction amount:" with "90"
     And I select "others" as the "transaction_trans_type"
     And I select datetime "2024 December 2" as the "transaction_trans_date"
-    And I select "member1" as the "Members involved:"
     And I press "Save Changes"
     Then  I should be on the home page
     And I should see "member1"
@@ -51,4 +50,39 @@ Scenario: update existing transaction
     And I press "Update Transaction Detail"
     Then I should see "11111"
 
+Scenario: update existing transaction missing transaction amount
+    Given I am on the home page
+    And I follow "Detail about Transaction 1"
+    And I follow "Edit Transaction"
+    And I fill in "transaction_amount" with ""
+    And I press "Update Transaction Detail"
+    Then I should see "failed"
 
+
+Scenario: update existing transaction missing transaction type
+    Given I am on the home page
+    And I follow "Detail about Transaction 1"
+    And I follow "Edit Transaction"
+    And I fill in "transaction_amount" with "2"
+    And I select "" as the "transaction_trans_type"
+    And I press "Update Transaction Detail"
+    Then I should see "failed"
+
+Scenario: add transactions to existing group with missing information
+    When I go to the new transaction page
+    And I select "member1" as the "User name:"  
+    And I fill in "Transaction amount:" with ""
+    And I select datetime "2024 December 2" as the "transaction_trans_date"
+    And I press "Save Changes"
+    Then  I should be on the home page
+    And I should see "failed"
+
+Scenario: add transactions to existing group with missing information
+    When I go to the new transaction page
+    And I select "member1" as the "User name:"  
+    And I fill in "Transaction amount:" with "2"
+    
+    And I select datetime "2024 December 2" as the "transaction_trans_date"
+    And I press "Save Changes"
+    Then  I should be on the home page
+    And I should see "failed"

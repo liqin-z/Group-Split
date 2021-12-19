@@ -32,9 +32,12 @@ bundle exec rackup --host 0.0.0.0
 bundle exec rails webpacker:install
 ```
 
+## Add new member:
+    Since a transaction must involve at least one member, need to add at least one member to the group before adding any transaction
+
 ### Add new transactions:
-    All input are required, no input are optional.
-    So if want to create new trasaction, make sure you fill in all the fields and make selections.
+    Remeber to select transaction type and put in money you paid upfront.
+    If no member is selected for member involved, then it's considered that all member are involved in the payment.
 
 ### Test: To get cucumber and Rspec running 
 ```
