@@ -9,7 +9,7 @@ class GroupviewsController < ApplicationController
       current_user_name = t.user_name
       current_group_name = t.group_name
       current_trans_number = t.trans_number
-      next if current_user_name.blank? || current_group_name.blank? || current_trans_number.blank?
+      next if current_user_name.blank? || current_trans_number.blank?
 
       ## Update group members
       # NO NEED TO REMOVE GROUP MEMBER EVEN IF TRANSACTION DELETED
